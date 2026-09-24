@@ -1,10 +1,10 @@
-export function Card({ pokemon }) {
+export function Card({ card }) {
     return (
         <div className="card">
             <div className="card-photo">
-                <img src={pokemon.image} />
+                <img src={card.image} />
             </div>
-            <div className="card-name">{pokemon.name}</div>
+            <div className="card-name">{card.name}</div>
         </div>
     )
 }

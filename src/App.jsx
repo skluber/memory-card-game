@@ -1,31 +1,25 @@
 import { useEffect, useState } from 'react'
 import { getPokemons } from './API/pokemonAPI';
-import { Card } from './components/Card';
+import { CardGrid } from './components/CardGrid';
 import './App.css'
 
 function App() {
-  const [pokemons, setPokemons] = useState([]);
+  const [cards, setCards] = useState([]);
 
   useEffect(() => {
     async function getCards() {
-      const pokemons = await getPokemons();
+      const cards = await getPokemons();
        
-      setPokemons(pokemons);
+      setCards(cards);
     }
 
     getCards();
   }, [])
-
   
 
   return (
     <>
-      {pokemons.map(pokemon => {
-        return <Card 
-        key={pokemon.name} 
-        pokemon={pokemon} 
-        />
-      })}
+      <CardGrid cards={cards} />
     </>
   )
 }
