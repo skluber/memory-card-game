@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getPokemons } from './API/pokemonAPI';
+import { Card } from './components/Card';
 import './App.css'
 
 function App() {
@@ -15,11 +16,16 @@ function App() {
     getCards();
   }, [])
 
-  console.log(pokemons);
+  
 
   return (
     <>
-      
+      {pokemons.map(pokemon => {
+        return <Card 
+        key={pokemon.name} 
+        pokemon={pokemon} 
+        />
+      })}
     </>
   )
 }
