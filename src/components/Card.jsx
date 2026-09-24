@@ -1,6 +1,6 @@
-export function Card({ card }) {
+export function Card({ card, onClick }) {
     return (
-        <div className="card">
+        <div className="card" onClick={() => onClick(card)}>
             <div className="card-photo">
                 <img src={card.image} />
             </div>

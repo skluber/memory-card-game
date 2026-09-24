@@ -1,5 +1,5 @@
 import { Card } from "./Card"
-export function CardGrid({ cards }) {
+export function CardGrid({ cards, onClick }) {
     return (
         <div className="card-grid">
 
@@ -7,6 +7,7 @@ export function CardGrid({ cards }) {
                 return <Card 
                 key={card.name} 
                 card={card} 
+                onClick={onClick}
                 />
             })}
 
