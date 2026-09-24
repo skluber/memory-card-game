@@ -214,6 +214,22 @@ header {
   text-transform: capitalize;
 }
 
+@media (max-width: 600px) {
+  .card-name {
+    display: none;
+  }
+
+  .card-photo {
+    padding: 0.25rem;
+  }
+
+  .card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
 /* =========================
    GAME OVER MODAL
    ========================= */
